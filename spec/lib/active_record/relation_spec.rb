@@ -59,8 +59,13 @@ describe ActiveRecord::Relation do
     end
 
     context 'when no arguments are given' do
-      it do
-        expect(Document.all.pluck_as_json).to eq([])
+      let(:keys) do
+        Document.all.pluck_as_json.first.keys
+      end
+      let(:expected) {%w(id status updated_at created_at)}
+
+      it 'returns all keys' do
+        expect(keys).to match_array(expected)
       end
     end
   end
