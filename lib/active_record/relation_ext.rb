@@ -17,11 +17,7 @@ module ActiveRecord
     end
 
     def pluck_as_json(*keys)
-      if keys.empty?
-        map { |e| e.as_json }
-      else
-        pluck(*keys).map { |i| i.as_hash(keys) }
-      end
+      keys.empty? ? map(&:as_json) : pluck(*keys).map { |i| i.as_hash(keys) }
     end
   end
 end
