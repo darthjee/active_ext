@@ -41,4 +41,27 @@ describe ActiveRecord::Relation do
       end
     end
   end
+
+  describe '#pluck_as_json' do
+    let(:json) { Document.all.pluck_as_json(:id, :status) }
+    let(:expected) do
+      [ { id: 1, status: 'error' }, { id: 2, status: 'success' } ]
+    end
+
+    before do
+      Document.all.each(&:destroy)
+      Document.create(id: 1, status: :error)
+      Document.create(id: 2, status: :success)
+    end
+
+    it 'returns an array of hashes' do
+      expect(json).to eq(expected)
+    end
+
+    context 'when no arguments are given' do
+      it do
+        expect(Document.all.pluck_as_json).to eq([])
+      end
+    end
+  end
 end

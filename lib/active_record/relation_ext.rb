@@ -15,5 +15,9 @@ module ActiveRecord
 
       filtered.count * 1.0 / count
     end
+
+    def pluck_as_json(*keys)
+      pluck(*keys).map{ |i| i.as_hash(keys) }
+    end
   end
 end

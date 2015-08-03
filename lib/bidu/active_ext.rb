@@ -1,3 +1,4 @@
+require 'bidu/core_ext'
 require 'active_record/relation_ext'
 
 module Bidu
