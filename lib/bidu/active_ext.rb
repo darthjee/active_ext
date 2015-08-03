@@ -1,3 +1,5 @@
+require 'active_record/relation_ext'
+
 module Bidu
   module ActiveExt
     require 'bidu/active_ext/version'
