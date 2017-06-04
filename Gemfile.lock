@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bidu-active_ext (1.0.0)
+    bidu-active_ext (1.1.0)
       activesupport (~> 5.1.1)
       bidu-core_ext (~> 1.2.4)
 
