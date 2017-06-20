@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    darthjee-active_ext (1.1.0)
+    darthjee-active_ext (1.2.0)
       activesupport (~> 5.1.1)
       darthjee-core_ext (~> 1.2.6)
 
