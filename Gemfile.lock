@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bidu-active_ext (1.1.0)
+    darthjee-active_ext (1.1.0)
       activesupport (~> 5.1.1)
       bidu-core_ext (~> 1.2.4)
 
@@ -52,8 +52,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 5.1.1)
-  bidu-active_ext!
   bundler (~> 1.6)
+  darthjee-active_ext!
   rake (~> 11.3.0)
   rspec (~> 2.14)
   rspec-mocks (~> 2.99.4)
