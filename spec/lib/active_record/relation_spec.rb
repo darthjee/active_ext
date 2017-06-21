@@ -4,11 +4,15 @@ describe ActiveRecord::Relation do
   describe '#percentage' do
     let(:error_number) { 1 }
     let(:success_number) { 1 }
+    let(:active_error_number) { 0 }
+    let(:active_success_number) { 0 }
 
     before do
       Document.all.each(&:destroy)
       error_number.times { Document.create(status: :error) }
       success_number.times { Document.create(status: :success) }
+      active_error_number.times { Document.active.create(status: :error) }
+      active_success_number.times { Document.active.create(status: :success) }
     end
 
     context 'when there are 50% documents with error' do
@@ -26,12 +30,11 @@ describe ActiveRecord::Relation do
     end
 
     context 'when passing a sub scope' do
-      before do
-        Document.create(status: :on_going)
-      end
+      let(:active_error_number) { 1 }
+      let(:active_success_number) { 4 }
 
       it 'does the math inside the scope' do
-        expect(Document.where(status: [:error, :success]).percentage(status: :error)).to eq(0.5)
+        expect(Document.active.percentage(:with_error)).to eq(0.2)
       end
     end
 
@@ -68,7 +71,7 @@ describe ActiveRecord::Relation do
       let(:keys) do
         Document.all.pluck_as_json.first.keys
       end
-      let(:expected) {%w(id status updated_at created_at)}
+      let(:expected) {%w(id status updated_at created_at active)}
 
       it 'returns all keys' do
         expect(keys).to match_array(expected)
