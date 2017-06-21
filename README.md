@@ -34,6 +34,7 @@ ActiveRecord::Schema.define do
   
   create_table :documents, :force => true do |t|
     t.string :status
+    t.boolean :active, default: false
     t.timestamps null: true
   end
 end
@@ -42,10 +43,12 @@ end
 class Document < ActiveRecord::Base
   scope :with_error, -> { where(status: :error) }
   scope :with_success, -> { where(status: :success) }
+  scope :active, -> { where(active: true) }
 end
 
-3.times { Document.with_error.create }
-Document.with_success.create
+2.times { Document.with_error.create }
+Document.active.with_error.create
+Document.active.with_success.create
 ```
 
 ### percentage
@@ -64,4 +67,10 @@ Document.all.percentage(status: :error)
 ```ruby
 Document.all.percentage("status = 'error'")
 0.75
+```
+Works also when using nested scopes
+
+```ruby
+Document.active.percentage(:with_error)
+0.5
 ```
