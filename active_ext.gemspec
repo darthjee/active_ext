@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bidu/active_ext/version'
+require 'darthjee/active_ext/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'bidu-active_ext'
-  spec.version = Bidu::ActiveExt::VERSION
-  spec.authors = ['Bidu Developers']
-  spec.email = ['dev@bidu.com.br']
+  spec.name = 'darthjee-active_ext'
+  spec.version = Darthjee::ActiveExt::VERSION
+  spec.authors = ['Darthjee']
+  spec.email = ['darthjee@gmail.com']
   spec.summary = 'Active Extensions'
 
   spec.files = `git ls-files -z`.split("\x0")
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'activesupport', '~> 5.1.1'
-  spec.add_runtime_dependency 'bidu-core_ext', '~> 1.2.4'
+  spec.add_runtime_dependency 'darthjee-core_ext', '~> 1.2.6'
 
   spec.add_development_dependency 'activerecord', '~> 5.1.1'
   spec.add_development_dependency 'sqlite3'
