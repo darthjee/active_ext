@@ -8,7 +8,7 @@ describe ActiveRecord::Relation do
     let(:active_success_number) { 0 }
 
     before do
-      Document.all.each(&:destroy)
+      Document.delete_all
       error_number.times { Document.create(status: :error) }
       success_number.times { Document.create(status: :success) }
       active_error_number.times { Document.active.create(status: :error) }
@@ -58,7 +58,7 @@ describe ActiveRecord::Relation do
     end
 
     before do
-      Document.all.each(&:destroy)
+      Document.delete_all
       Document.create(id: 1, status: :error)
       Document.create(id: 2, status: :success)
     end
