@@ -55,17 +55,17 @@ Document.active.with_success.create
 Returns the percentage of objects of a certain scope within another scope
 
 ```ruby
-Document.all.percentage(:with_error)
+Document.percentage(:with_error)
 0.75
 ```
 
 ```ruby
-Document.all.percentage(status: :error)
+Document.percentage(status: :error)
 0.75
 ```
 
 ```ruby
-Document.all.percentage("status = 'error'")
+Document.percentage("status = 'error'")
 0.75
 ```
 Works also when using nested scopes
@@ -79,12 +79,12 @@ Document.active.percentage(:with_error)
 Just as pluck returns some specifc columns, pluck_as_json returns the same coluns with keys to identify
 
 ```ruby
-Document.all.pluck(:id, :active)
+Document.pluck(:id, :active)
 [[1, true], [2, true]]
 ```
 
 ```ruby
-Document.all.pluck_as_json(:id, :active)
+Document.pluck_as_json(:id, :active)
 [
   {id: 18, active: false},
   {id: 19, active: false},
