@@ -1,4 +1,4 @@
-Active_Ext
+ActiveExt
 ==========
 
 [![Code Climate](https://codeclimate.com/github/darthjee/active_ext/badges/gpa.svg)](https://codeclimate.com/github/darthjee/active_ext)
