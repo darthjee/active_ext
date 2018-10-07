@@ -28,4 +28,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec',       '>= 2.14'
   gem.add_development_dependency 'rspec-mocks', '>= 2.99.4'
   gem.add_development_dependency 'simplecov',   '>= 0.14.1'
+  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'yard'
 end
