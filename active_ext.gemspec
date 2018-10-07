@@ -17,8 +17,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_runtime_dependency 'activesupport',     '>= 5.x'
-  gem.add_runtime_dependency 'darthjee-core_ext', '>= 1.5.6'
+  gem.add_runtime_dependency 'activesupport',     '>= 5.2.x'
+  gem.add_runtime_dependency 'darthjee-core_ext', '>= 1.7.2'
 
   gem.add_development_dependency 'activerecord', '~> 5.x'
   gem.add_development_dependency 'sqlite3'
