@@ -1,2 +1,6 @@
 ignore:
   - lib/darthjee/active_ext/version.rb
+  - lib/active_record/base_ext.rb
+  - lib/active_record/relation_ext.rb
+  - lib/darthjee/active_ext.rb
+  - lib/darthjee.rb
