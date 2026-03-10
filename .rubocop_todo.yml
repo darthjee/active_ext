@@ -135,11 +135,3 @@ Style/NumericPredicate:
 Style/PercentLiteralDelimiters:
   Exclude:
     - 'spec/support/shared_examples/active_relation.rb'
-
-# Offense count: 3
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'spec/spec_helper.rb'
