@@ -19,4 +19,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'activesupport',     '~> 7.2.x'
   gem.add_dependency 'darthjee-core_ext', '>= 1.7.2'
+  gem.metadata['rubygems_mfa_required'] = 'false'
 end
