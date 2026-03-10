@@ -75,7 +75,9 @@ module ActiveRecord
     #   Document.active.pluck_as_json(:id, :status)
     #   #=> [{ id: 2, status: "success" }]
     def pluck_as_json(*keys)
-      keys.empty? ? map(&:as_json) : pluck(*keys).map { |i| i.as_hash(keys) }
+      return map(&:as_json) if keys.empty?
+      
+      pluck(*keys).map { |i| i.as_hash(keys) }
     end
   end
 end
