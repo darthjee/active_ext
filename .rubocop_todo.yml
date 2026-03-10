@@ -8,12 +8,6 @@
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
-Layout/EmptyLineAfterMagicComment:
-  Exclude:
-    - 'active_ext.gemspec'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLines:
   Exclude:
     - 'Gemfile'
