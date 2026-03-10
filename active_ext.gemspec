@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Active Extensions'
   gem.homepage      = 'https://github.com/darthjee/active_ext'
   gem.description   = 'Extension of active support classes with usefull methods'
+  gem.required_ruby_version = '>= 3.3.1'
 
   gem.files         = `git ls-files -z`.split("\x0")
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
