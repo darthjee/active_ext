@@ -3,7 +3,7 @@
 require 'active_record'
 
 module ActiveRecord
-  # Extends ActiveRecord::Base with additional class methods.
+  # Extends +ActiveRecord::Base+ with additional class methods.
 
   # These methods are delegated to the `all` scope of the model,
   # allowing you to call them directly on the model class.

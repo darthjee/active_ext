@@ -3,6 +3,9 @@
 require 'active_record'
 
 module ActiveRecord
+  # Extends +ActiveRecord::Relation+ with additional instance methods.
+  #
+  # These methods are available on all ActiveRecord relations.
   class Relation
     # Returns the fraction of records in the current relation that match the
     # given filter(s), as a decimal between +0.0+ and +1.0+.
