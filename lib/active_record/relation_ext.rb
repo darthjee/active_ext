@@ -43,16 +43,11 @@ module ActiveRecord
     #   Document.where(id: nil).percentage(:with_error) #=> 0.0
     def percentage(*filters)
       return 0.0 if count.zero?
+      return where(*filters).count * 1.0 / count unless filters.first.is_a?(Symbol)
 
-      filtered = if filters.first.is_a?(Symbol)
-                   filters.inject(self) do |relation, scope|
-                     relation.public_send(scope)
-                   end
-                 else
-                   where(*filters)
-                 end
-
-      filtered.count * 1.0 / count
+      filters.inject(self) do |relation, scope|
+        relation.public_send(scope)
+      end.count * 1.0 / count
     end
 
     # Returns an array of hashes for the selected columns, one hash per record.
