@@ -72,7 +72,7 @@ shared_examples 'a method that works as pluck but returning the keys' do
     let(:keys) do
       subject.pluck_as_json.first.keys
     end
-    let(:expected) {%w(id status updated_at created_at active)}
+    let(:expected) {%w[id status updated_at created_at active]}
 
     it 'returns all keys' do
       expect(keys).to match_array(expected)
