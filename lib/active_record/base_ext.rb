@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_record'
 
 module ActiveRecord
@@ -7,4 +9,3 @@ module ActiveRecord
     end
   end
 end
-

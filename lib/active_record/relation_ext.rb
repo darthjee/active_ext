@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'active_record'
 
 module ActiveRecord
@@ -34,15 +36,15 @@ module ActiveRecord
     # @example Empty relation returns 0, not a Float
     #   Document.where(id: nil).percentage(:with_error) #=> 0
     def percentage(*filters)
-      return 0 if count == 0
+      return 0 if count.zero?
 
-      if filters.first.is_a?(Symbol)
-        filtered = filters.inject(self) do |relation, scope|
-          relation.public_send(scope)
-        end
-      else
-        filtered = where(*filters)
-      end
+      filtered = if filters.first.is_a?(Symbol)
+                   filters.inject(self) do |relation, scope|
+                     relation.public_send(scope)
+                   end
+                 else
+                   where(*filters)
+                 end
 
       filtered.count * 1.0 / count
     end

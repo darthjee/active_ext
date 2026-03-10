@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 shared_examples 'a method that returns the percentage of objects found' do
@@ -53,7 +55,7 @@ end
 shared_examples 'a method that works as pluck but returning the keys' do
   let(:json) { subject.pluck_as_json(:id, :status) }
   let(:expected) do
-    [ { id: 1, status: 'error' }, { id: 2, status: 'success' } ]
+    [{ id: 1, status: 'error' }, { id: 2, status: 'success' }]
   end
 
   before do
@@ -70,7 +72,7 @@ shared_examples 'a method that works as pluck but returning the keys' do
     let(:keys) do
       subject.pluck_as_json.first.keys
     end
-    let(:expected) {%w(id status updated_at created_at active)}
+    let(:expected) { %w[id status updated_at created_at active] }
 
     it 'returns all keys' do
       expect(keys).to match_array(expected)
