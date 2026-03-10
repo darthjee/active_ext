@@ -5,6 +5,15 @@ ActiveExt
 [![Test Coverage](https://codeclimate.com/github/darthjee/active_ext/badges/coverage.svg)](https://codeclimate.com/github/darthjee/active_ext/coverage)
 [![Issue Count](https://codeclimate.com/github/darthjee/active_ext/badges/issue_count.svg)](https://codeclimate.com/github/darthjee/active_ext)
 
+**Current Release**: [1.3.2](https://github.com/darthjee/active_ext/tree/1.3.2)
+
+**Next release**: [1.4.0](https://github.com/darthjee/active_ext/compare/1.3.2...master)
+
+Yard Documentation
+-------------------
+[https://www.rubydoc.info/gems/darthjee-active_ext/1.3.2](https://www.rubydoc.info/gems/darthjee-active_ext/1.3.2)
+
+
 # Usage
 This project adds some new methods to the core active_record classes
 
