@@ -22,7 +22,6 @@ gem 'simplecov',                '0.22.0'
 gem 'simplecov-html',           '0.13.2'
 gem 'simplecov-lcov',           '0.9.0'
 gem 'rubocop',                  '1.85.1'
-gem 'rubocop-rails',            '2.34.3'
 gem 'rubocop-rake',             '0.7.1'
 gem 'rubocop-rspec',            '3.9.0'
 
