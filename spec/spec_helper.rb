@@ -1,10 +1,15 @@
 require 'simplecov'
 
-SimpleCov.profiles.define 'gem' do
+if ENV['CI']
+  require 'simplecov-lcov'
+  SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+  SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+end
+
+SimpleCov.start do
   add_filter '/spec/'
 end
 
-SimpleCov.start 'gem'
 require 'darthjee/active_ext'
 ActiveRecord::Base.establish_connection(adapter: "sqlite3", database: ":memory:")
 
