@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in credential_builder.gemspec
 gemspec
 
-
 gem 'activerecord',              '7.2.2.1'
 gem 'bundler',                  '>= 2.5.13'
 gem 'pry',                      '0.14.2'
