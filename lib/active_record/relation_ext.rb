@@ -61,6 +61,18 @@ module ActiveRecord
     #   @param scopes [Array<Symbol>] one or more named scopes to chain.
     #
     # @return [ActiveRecord::Relation] a new relation with the filters applied.
+    #
+    # @example Using a named scope
+    #   Document.scopped(:with_error) #=> returns relation with :with_error scope applied
+    #
+    # @example Using a hash condition
+    #   Document.scopped(status: :error) #=> returns relation where status is error
+    #
+    # @example Using a raw SQL string
+    #   Document.scopped("status = 'error'") #=> returns relation where status is error
+    #
+    # @example Chaining multiple named scopes
+    #   Document.scopped(:active, :with_error) #=> returns relation with both scopes applied
     def scopped(*filters)
       return where(*filters) unless filters.first.is_a?(Symbol)
 
