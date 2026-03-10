@@ -55,7 +55,7 @@ end
 shared_examples 'a method that works as pluck but returning the keys' do
   let(:json) { subject.pluck_as_json(:id, :status) }
   let(:expected) do
-    [ { id: 1, status: 'error' }, { id: 2, status: 'success' } ]
+    [{ id: 1, status: 'error' }, { id: 2, status: 'success' }]
   end
 
   before do
