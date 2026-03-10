@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe ActiveRecord::Relation do
-  let(:subject) { Document }
+  subject { Document }
 
   describe '.percentage' do
     it_behaves_like 'a method that returns the percentage of objects found'
