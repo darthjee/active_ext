@@ -8,7 +8,7 @@ ActiveExt
 
 **Current Release**: [1.3.2](https://github.com/darthjee/active_ext/tree/1.3.2)
 
-**Next release**: [1.4.0](https://github.com/darthjee/active_ext/compare/1.3.2...master)
+**Next release**: [1.4.0](https://github.com/darthjee/active_ext/compare/1.3.2...main)
 
 Yard Documentation
 -------------------
