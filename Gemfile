@@ -24,4 +24,5 @@ gem 'simplecov-lcov',           '0.9.0'
 gem 'rubocop',                  '1.85.1'
 gem 'rubocop-rake',             '0.7.1'
 gem 'rubocop-rspec',            '3.9.0'
-
+gem 'yard',                     '0.9.38'
+gem 'yardstick',                '0.9.9'
