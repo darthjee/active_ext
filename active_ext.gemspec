@@ -20,15 +20,4 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'activesupport',     '>= 5.2.x'
   gem.add_runtime_dependency 'darthjee-core_ext', '>= 1.7.2'
-
-  gem.add_development_dependency 'activerecord', '~> 5.x'
-  gem.add_development_dependency 'sqlite3'
-
-  gem.add_development_dependency 'bundler',     '>= 1.6'
-  gem.add_development_dependency 'rake',        '>= 11.3.0'
-  gem.add_development_dependency 'rspec',       '>= 2.14'
-  gem.add_development_dependency 'rspec-mocks', '>= 2.99.4'
-  gem.add_development_dependency 'simplecov',   '>= 0.14.1'
-  gem.add_development_dependency 'rubocop'
-  gem.add_development_dependency 'yard'
 end
