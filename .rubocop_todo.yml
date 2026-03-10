@@ -7,15 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: final_newline, final_blank_line
-Layout/TrailingEmptyLines:
-  Exclude:
-    - 'lib/active_record/base_ext.rb'
-    - 'lib/darthjee.rb'
-
 # Offense count: 1
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
