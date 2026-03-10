@@ -1,2 +1,2 @@
 ignore:
-  - lib/active_ext/version.rb
+  - lib/darthjee/active_ext/version.rb
