@@ -3,15 +3,21 @@
 require 'active_record'
 
 module ActiveRecord
+  # Extends +ActiveRecord::Relation+ with additional instance methods.
+  #
+  # These methods are available on all ActiveRecord relations.
   class Relation
     # Returns the fraction of records in the current relation that match the
     # given filter(s), as a decimal between +0.0+ and +1.0+.
     #
-    # @param filters [Symbol, Array<Symbol>, Hash, String] the condition(s) to
-    #   evaluate.  Pass one or more Symbols to chain named scopes, a Hash for
-    #   an inline condition, or a SQL String.
+    # @overload percentage(**conditions)
+    #   @param conditions [Hash] a hash of column names and values to match.
+    # @overload percentage(sql_condition)
+    #   @param sql_condition [String] a raw SQL condition to evaluate.
+    # @overload percentage(*scopes)
+    #   @param scopes [Array<Symbol>] one or more named scopes to chain.
     #
-    # @return [Float, Integer] fraction of matching records (0.0–1.0), or +0+
+    # @return [Float] fraction of matching records (0.0–1.0), or +0.0+
     #   when the relation is empty (to avoid division by zero).
     #
     # @note Do *not* mix Symbol scope names with Hash or String conditions in a
@@ -33,10 +39,10 @@ module ActiveRecord
     # @example Within a nested scope
     #   Document.active.percentage(:with_error) #=> 0.5
     #
-    # @example Empty relation returns 0, not a Float
-    #   Document.where(id: nil).percentage(:with_error) #=> 0
+    # @example Empty relation returns 0.0, not a Float
+    #   Document.where(id: nil).percentage(:with_error) #=> 0.0
     def percentage(*filters)
-      return 0 if count.zero?
+      return 0.0 if count.zero?
 
       filtered = if filters.first.is_a?(Symbol)
                    filters.inject(self) do |relation, scope|
@@ -56,8 +62,9 @@ module ActiveRecord
     # When called with no arguments, returns the full +as_json+ representation
     # of every record in the relation.
     #
-    # @param keys [Array<Symbol>] column names to include in each hash.
-    #   If empty, all columns are returned via +as_json+.
+    # @overload pluck_as_json(*keys)
+    #  @param keys [Array<Symbol>] column names to include in each hash.
+    # @overload pluck_as_json()
     #
     # @return [Array<Hash>] array of hashes mapping column name to value.
     #
