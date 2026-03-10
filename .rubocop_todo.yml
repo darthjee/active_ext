@@ -124,11 +124,6 @@ Style/Encoding:
   Exclude:
     - 'active_ext.gemspec'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ExpandPathArguments:
-  Exclude:
-    - 'active_ext.gemspec'
 
 # Offense count: 14
 # This cop supports unsafe autocorrection (--autocorrect-all).
