@@ -9,7 +9,7 @@ module ActiveRecord
   # allowing you to call them directly on the model class.
   class Base
     class << self
-      delegate :percentage, :pluck_as_json, to: :all
+      delegate :percentage, :pluck_as_json, :scopped, to: :all
 
       # @method percentage
       # Calculates the percentage of records that match a given condition.
@@ -19,6 +19,14 @@ module ActiveRecord
       # @param (see ActiveRecord::Relation#percentage)
       # @return (see ActiveRecord::Relation#percentage)
       # @example (see ActiveRecord::Relation#percentage)
+
+      # @method scopped
+      # Applies the given filters to the relation, returning a new relation.
+      # @overload (see ActiveRecord::Relation#scopped)
+      # @see ActiveRecord::Relation#scopped
+      # @param (see ActiveRecord::Relation#scopped)
+      # @return (see ActiveRecord::Relation#scopped)
+      # @example (see ActiveRecord::Relation#scopped)
 
       # @method pluck_as_json
       # Plucks specified columns and returns an array of hashes.
