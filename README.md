@@ -1,9 +1,10 @@
 ActiveExt
 ==========
 
-[![Code Climate](https://codeclimate.com/github/darthjee/active_ext/badges/gpa.svg)](https://codeclimate.com/github/darthjee/active_ext)
-[![Test Coverage](https://codeclimate.com/github/darthjee/active_ext/badges/coverage.svg)](https://codeclimate.com/github/darthjee/active_ext/coverage)
-[![Issue Count](https://codeclimate.com/github/darthjee/active_ext/badges/issue_count.svg)](https://codeclimate.com/github/darthjee/active_ext)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/darthjee/active_ext/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/darthjee/active_ext/tree/main)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ba204b06239b4e1483fe1ce2fb4aced2)](https://app.codacy.com/gh/darthjee/active_ext/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/ba204b06239b4e1483fe1ce2fb4aced2)](https://app.codacy.com/gh/darthjee/active_ext/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Gem Version](https://badge.fury.io/rb/darthjee-active_ext.svg)](https://badge.fury.io/rb/darthjee-active_ext)
 
 **Current Release**: [1.3.2](https://github.com/darthjee/active_ext/tree/1.3.2)
 
