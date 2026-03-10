@@ -41,13 +41,32 @@ module ActiveRecord
     #
     # @example Empty relation returns 0.0, not a Float
     #   Document.where(id: nil).percentage(:with_error) #=> 0.0
+    #
+    # @see #scopped for the underlying implementation of filter application.
     def percentage(*filters)
       return 0.0 if count.zero?
-      return where(*filters).count * 1.0 / count unless filters.first.is_a?(Symbol)
+
+      scopped(*filters).count / count.to_f
+    end
+
+    # Applies the given filters to the relation, returning a new relation.
+    # This is a helper method for +percentage+ to handle both named scopes and
+    # arbitrary conditions.
+    #
+    # @overload scopped(**conditions)
+    #   @param conditions [Hash] a hash of column names and values to match.
+    # @overload scopped(sql_condition)
+    #   @param sql_condition [String] a raw SQL condition to evaluate.
+    # @overload scopped(*scopes)
+    #   @param scopes [Array<Symbol>] one or more named scopes to chain.
+    #
+    # @return [ActiveRecord::Relation] a new relation with the filters applied.
+    def scopped(*filters)
+      return where(*filters) unless filters.first.is_a?(Symbol)
 
       filters.inject(self) do |relation, scope|
         relation.public_send(scope)
-      end.count * 1.0 / count
+      end
     end
 
     # Returns an array of hashes for the selected columns, one hash per record.
