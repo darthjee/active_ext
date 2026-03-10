@@ -118,28 +118,6 @@ Style/Documentation:
     - 'lib/darthjee.rb'
     - 'lib/darthjee/active_ext.rb'
 
-# Offense count: 14
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - '**/*.arb'
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'active_ext.gemspec'
-    - 'lib/active_record/base_ext.rb'
-    - 'lib/active_record/relation_ext.rb'
-    - 'lib/darthjee.rb'
-    - 'lib/darthjee/active_ext.rb'
-    - 'lib/darthjee/active_ext/version.rb'
-    - 'spec/lib/active_record/base_spec.rb'
-    - 'spec/lib/active_record/relation_spec.rb'
-    - 'spec/spec_helper.rb'
-    - 'spec/support/models/document.rb'
-    - 'spec/support/schema.rb'
-    - 'spec/support/shared_examples/active_relation.rb'
-
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, EnforcedShorthandSyntax, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
