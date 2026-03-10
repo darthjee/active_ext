@@ -54,7 +54,7 @@ jobs:
           command: bundle exec rake verify_measurements
       - run:
           name: Check version documentation
-          command: VERSION_PATH=lib/darthjee/active_ext/version.rb check_readme.sh
+          command: VERSION_PATH=lib/darthjee/active_ext/version.rb GEM_NAME=darthjee-active_ext check_readme.sh
       - run:
           name: Rubycritcs check
           command: rubycritic.sh
