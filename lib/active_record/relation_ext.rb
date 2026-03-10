@@ -38,13 +38,13 @@ module ActiveRecord
     def percentage(*filters)
       return 0 if count.zero?
 
-      if filters.first.is_a?(Symbol)
-        filtered = filters.inject(self) do |relation, scope|
-          relation.public_send(scope)
-        end
-      else
-        filtered = where(*filters)
-      end
+      filtered = if filters.first.is_a?(Symbol)
+                   filters.inject(self) do |relation, scope|
+                     relation.public_send(scope)
+                   end
+                 else
+                   where(*filters)
+                 end
 
       filtered.count * 1.0 / count
     end
