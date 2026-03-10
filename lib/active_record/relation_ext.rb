@@ -59,8 +59,9 @@ module ActiveRecord
     # When called with no arguments, returns the full +as_json+ representation
     # of every record in the relation.
     #
-    # @param keys [Array<Symbol>] column names to include in each hash.
-    #   If empty, all columns are returned via +as_json+.
+    # @overload pluck_as_json(*keys)
+    #  @param keys [Array<Symbol>] column names to include in each hash.
+    # @overload pluck_as_json()
     #
     # @return [Array<Hash>] array of hashes mapping column name to value.
     #
