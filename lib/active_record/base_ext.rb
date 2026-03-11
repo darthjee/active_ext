@@ -14,7 +14,7 @@ module ActiveRecord
       # @method percentage
       # @api public
       #
-      # Calculates the percentage of records that match a given condition.
+      # Calculates the percentage of records that match a given condition
       # @overload (see ActiveRecord::Relation#percentage)
       #
       # @see ActiveRecord::Relation#percentage
@@ -25,7 +25,7 @@ module ActiveRecord
       # @method scopped
       # @api public
       #
-      # Applies the given filters to the relation, returning a new relation.
+      # Applies the given filters to the relation, returning a new relation
       # @overload (see ActiveRecord::Relation#scopped)
       # @see ActiveRecord::Relation#scopped
       # @param (see ActiveRecord::Relation#scopped)
@@ -35,7 +35,8 @@ module ActiveRecord
       # @method pluck_as_json
       # @api public
       #
-      # Plucks specified columns and returns an array of hashes.
+      # Plucks specified columns and returns an array of hashes
+      #
       # @overload (see ActiveRecord::Relation#pluck_as_json)
       # @see ActiveRecord::Relation#pluck_as_json
       # @param (see ActiveRecord::Relation#pluck_as_json)
