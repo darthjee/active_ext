@@ -9,8 +9,7 @@ module ActiveRecord
   class Relation
     # @api public
     #
-    # Returns the fraction of records in the current relation that match the
-    # given filter(s), as a decimal between +0.0+ and +1.0+.
+    # Returns the percentage of records that match the given filter
     #
     # @overload percentage(**conditions)
     #   @param conditions [Hash] a hash of column names and values to match.
@@ -53,7 +52,8 @@ module ActiveRecord
 
     # @api private
     #
-    # Applies the given filters to the relation, returning a new relation.
+    # Applies the given filters to the relation, returning a new relation
+    #
     # This is a helper method for +percentage+ to handle both named scopes and
     # arbitrary conditions.
     #
@@ -87,7 +87,8 @@ module ActiveRecord
 
     # @api public
     #
-    # Returns an array of hashes for the selected columns, one hash per record.
+    # Returns an array of hashes for the selected columns, one hash per record
+    #
     # This is similar to +pluck+, but each row is represented as a Hash keyed
     # by column name (as a Symbol) rather than a plain Array.
     #
