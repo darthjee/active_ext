@@ -76,7 +76,7 @@ jobs:
           command: build_gem.sh signin
       - run:
           name: Build Gem
-          command: build_gem.sh build
+          command: PROJECT=darthjee-core_ext build_gem.sh build
       - run:
           name: Push Gem
-          command: build_gem.sh push
+          command: PROJECT=darthjee-core_ext build_gem.sh push
