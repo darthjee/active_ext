@@ -12,7 +12,9 @@ module ActiveRecord
       delegate :percentage, :pluck_as_json, :scopped, to: :all
 
       # @method percentage
-      # Calculates the percentage of records that match a given condition.
+      # @api public
+      #
+      # Calculates the percentage of records that match a given condition
       # @overload (see ActiveRecord::Relation#percentage)
       #
       # @see ActiveRecord::Relation#percentage
@@ -21,7 +23,9 @@ module ActiveRecord
       # @example (see ActiveRecord::Relation#percentage)
 
       # @method scopped
-      # Applies the given filters to the relation, returning a new relation.
+      # @api public
+      #
+      # Applies the given filters to the relation, returning a new relation
       # @overload (see ActiveRecord::Relation#scopped)
       # @see ActiveRecord::Relation#scopped
       # @param (see ActiveRecord::Relation#scopped)
@@ -29,7 +33,10 @@ module ActiveRecord
       # @example (see ActiveRecord::Relation#scopped)
 
       # @method pluck_as_json
-      # Plucks specified columns and returns an array of hashes.
+      # @api public
+      #
+      # Plucks specified columns and returns an array of hashes
+      #
       # @overload (see ActiveRecord::Relation#pluck_as_json)
       # @see ActiveRecord::Relation#pluck_as_json
       # @param (see ActiveRecord::Relation#pluck_as_json)

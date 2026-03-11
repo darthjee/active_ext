@@ -7,8 +7,9 @@ module ActiveRecord
   #
   # These methods are available on all ActiveRecord relations.
   class Relation
-    # Returns the fraction of records in the current relation that match the
-    # given filter(s), as a decimal between +0.0+ and +1.0+.
+    # @api public
+    #
+    # Returns the percentage of records that match the given filter
     #
     # @overload percentage(**conditions)
     #   @param conditions [Hash] a hash of column names and values to match.
@@ -49,7 +50,10 @@ module ActiveRecord
       scopped(*filters).count / count.to_f
     end
 
-    # Applies the given filters to the relation, returning a new relation.
+    # @api private
+    #
+    # Applies the given filters to the relation, returning a new relation
+    #
     # This is a helper method for +percentage+ to handle both named scopes and
     # arbitrary conditions.
     #
@@ -81,7 +85,10 @@ module ActiveRecord
       end
     end
 
-    # Returns an array of hashes for the selected columns, one hash per record.
+    # @api public
+    #
+    # Returns an array of hashes for the selected columns, one hash per record
+    #
     # This is similar to +pluck+, but each row is represented as a Hash keyed
     # by column name (as a Symbol) rather than a plain Array.
     #

@@ -15,10 +15,16 @@ rules:
     exclude: []
   ExampleTag:
     enabled: true
-    exclude: []
+    exclude:
+      - ActiveRecord::Base.percentage
+      - ActiveRecord::Base.pluck_as_json
+      - ActiveRecord::Base.scopped
   ReturnTag:
     enabled: true
-    exclude: []
+    exclude:
+      - ActiveRecord::Base.percentage
+      - ActiveRecord::Base.pluck_as_json
+      - ActiveRecord::Base.scopped
   Summary::Presence:
     enabled: true
     exclude: []
