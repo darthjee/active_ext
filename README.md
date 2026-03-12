@@ -6,6 +6,8 @@ ActiveExt
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/ba204b06239b4e1483fe1ce2fb4aced2)](https://app.codacy.com/gh/darthjee/active_ext/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 [![Gem Version](https://badge.fury.io/rb/darthjee-active_ext.svg)](https://badge.fury.io/rb/darthjee-active_ext)
 
+![active_ext](https://raw.githubusercontent.com/darthjee/active_ext/main/active_ext.jpg)
+
 **Current Release**: [1.4.0](https://github.com/darthjee/active_ext/tree/1.4.0)
 
 **Next release**: [1.5.0](https://github.com/darthjee/active_ext/compare/1.4.0...main)
